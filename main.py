@@ -5,7 +5,7 @@
 
 print('test')
 print('diff source')
-def print_hi(name):
+def print_qwe(name):
     # Use a breakpoint in the code line below to debug your script.
     print('conflict')
     print('qwe')
@@ -13,6 +13,6 @@ def print_hi(name):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    print_qwe('PyCharm')
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
