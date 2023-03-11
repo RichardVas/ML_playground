@@ -6,6 +6,7 @@ class Snake:
         self.snake_color = (0,255,0)
         self.display = dis
         self.snake_body = [[100,90,10,10], [100,80,10,10], [100,70,10,10]]
+        self.direction = [0,10]
 
 
     def update_snek(self):
@@ -13,31 +14,41 @@ class Snake:
         for i in self.snake_body:
             pygame.draw.rect(self.display,self.snake_color,i)
 
+    def move_body_in_direction(self):
+        old_head_pos = self.snake_head_pos.copy()
+        self.snake_head_pos[0] += self.direction[0]
+        self.snake_head_pos[1] += self.direction[1]
+        self.push_body(old_head_pos)
     def push_body(self,old_head):
         self.snake_body[2] = self.snake_body[1]
         self.snake_body[1] = self.snake_body[0]
         self.snake_body[0] = old_head
     def move_down(self):
 
+        self.direction = [0,10]
         old_head_pos = self.snake_head_pos.copy()
         self.snake_head_pos[0] += 0
         self.snake_head_pos[1] += 10
-        self.push_body(old_head_pos)
+        #self.push_body(old_head_pos)
+
     def move_right(self):
+        self.direction = [10,0]
         old_head_pos = self.snake_head_pos.copy()
         self.snake_head_pos[0] += 10
         self.snake_head_pos[1] += 0
-        self.push_body(old_head_pos)
+        #self.push_body(old_head_pos)
     def move_left(self):
+        self.direction = [-10,0]
         old_head_pos = self.snake_head_pos.copy()
         self.snake_head_pos[0] -= 10
         self.snake_head_pos[1] += 0
-        self.push_body(old_head_pos)
+        #self.push_body(old_head_pos)
     def move_up(self):
+        self.direction = [0,-10]
         old_head_pos = self.snake_head_pos.copy()
         self.snake_head_pos[0] += 0
         self.snake_head_pos[1] -= 10
-        self.push_body(old_head_pos)
+        #self.push_body(old_head_pos)
 
     def consume(self):
         # by consuming an apple the body of the snake will be extanded by 1 rectangle

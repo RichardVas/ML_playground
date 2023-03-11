@@ -18,6 +18,7 @@ if __name__ == '__main__':
     pygame.display.update()
     game_over = False
     while not game_over:
+
         for event in pygame.event.get():
             print(event)
             if event.type == pygame.QUIT:
@@ -32,18 +33,21 @@ if __name__ == '__main__':
             elif keys[pygame.K_DOWN]:
                 snek.move_down()
 
-            if(snek.snake_head_pos == apple.apple_pos):
-                print('ham')
-                apple.apple_eaten()
 
         dis.fill((0, 0, 0))
+        if(snek.snake_head_pos == apple.apple_pos):
+            print('ham')
+            apple.apple_eaten()
+        snek.move_body_in_direction()
+
         fps.render(dis)
+
         snek.update_snek()
         apple.updt_apple()
 
         pygame.display.update()
 
-        fps.clock.tick(60)
+        fps.clock.tick(30)
     pygame.quit()
     quit()
 
