@@ -32,11 +32,15 @@ if __name__ == '__main__':
             elif keys[pygame.K_DOWN]:
                 snek.move_down()
 
+            if(snek.snake_head_pos == apple.apple_pos):
+                print('ham')
+                apple.apple_eaten()
+
         dis.fill((0, 0, 0))
         fps.render(dis)
         snek.update_snek()
+        apple.updt_apple()
 
-        pygame.draw.rect(dis, (255, 0, 0), [200, 100, 10, 10])
         pygame.display.update()
 
         fps.clock.tick(60)

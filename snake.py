@@ -1,10 +1,12 @@
 import pygame
+import random
 class Snake:
     def __init__(self,dis):
         self.snake_head_pos = [100,100,10,10]
         self.snake_color = (0,255,0)
         self.display = dis
         self.snake_body = [[100,90,10,10], [100,80,10,10], [100,70,10,10]]
+
 
     def update_snek(self):
         pygame.draw.rect(self.display, self.snake_color, self.snake_head_pos)
@@ -37,6 +39,16 @@ class Snake:
         self.snake_head_pos[1] -= 10
         self.push_body(old_head_pos)
 
+    def consume(self):
+        # by consuming an apple the body of the snake will be extanded by 1 rectangle
+        # the tail will be extended by adding the last element of body before it is updated.
+        last_tail = self.snake_body[-1].copy()
+        old_head_pos = self.snake_head_pos.copy()
+
+
+        self.snake_body.append(last_tail)
+        pass
+
 
 class Apple:
     def __init__(self,dis):
@@ -44,3 +56,8 @@ class Apple:
         self.apple_color = (255,0,0)
         self.display = dis
         pygame.draw.rect(self.display, self.apple_color, self.apple_pos)
+
+    def updt_apple(self):
+        pygame.draw.rect(self.display, self.apple_color, self.apple_pos)
+    def apple_eaten(self):
+        self.apple_pos = [random.randint(0,64)*10,random.randint(0,48)*10,10,10]
