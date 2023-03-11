@@ -1,18 +1,54 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-print('test')
-print('diff source')
-def print_qwe(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print('conflict')
-    print('qwe')
+import pygame
+from fps import *
+from snake import *
 
 
-# Press the green button in the gutter to run the script.
+
+#tutorial
 if __name__ == '__main__':
-    print_qwe('PyCharm')
+    clock = pygame.time.Clock()
+    pygame.init()
+    fps = FPS()
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    dis = pygame.display.set_mode((640,480))
+    apple = Apple(dis)
+    snek = Snake(dis)
+
+    snek.update_snek()
+    pygame.display.update()
+    game_over = False
+    while not game_over:
+
+        for event in pygame.event.get():
+            print(event)
+            if event.type == pygame.QUIT:
+                game_over = True
+            keys = pygame.key.get_pressed()
+            if keys[pygame.K_LEFT]:
+                snek.move_left()
+            elif keys[pygame.K_RIGHT]:
+                snek.move_right()
+            elif keys[pygame.K_UP]:
+                snek.move_up()
+            elif keys[pygame.K_DOWN]:
+                snek.move_down()
+
+
+        dis.fill((0, 0, 0))
+        if(snek.snake_head_pos == apple.apple_pos):
+            print('ham')
+            apple.apple_eaten()
+        snek.move_body_in_direction()
+
+        fps.render(dis)
+
+        snek.update_snek()
+        apple.updt_apple()
+
+        pygame.display.update()
+
+        fps.clock.tick(30)
+    pygame.quit()
+    quit()
+
+
