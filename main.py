@@ -10,7 +10,7 @@ if __name__ == '__main__':
     pygame.init()
     fps = FPS()
 
-    dis = pygame.display.set_mode((640,480))
+    dis = pygame.display.set_mode((360,240))
     apple = Apple(dis)
     snek = Snake(dis)
 
@@ -38,16 +38,17 @@ if __name__ == '__main__':
         if(snek.snake_head_pos == apple.apple_pos):
             print('ham')
             apple.apple_eaten()
-        snek.move_body_in_direction()
-
-        fps.render(dis)
-
         snek.update_snek()
         apple.updt_apple()
 
         pygame.display.update()
+        snek.move_body_in_direction()
 
-        fps.clock.tick(30)
+        fps.render(dis)
+
+
+
+        fps.clock.tick(10)
     pygame.quit()
     quit()
 
