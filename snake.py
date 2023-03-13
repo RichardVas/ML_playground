@@ -71,4 +71,4 @@ class Apple:
     def updt_apple(self):
         pygame.draw.rect(self.display, self.apple_color, self.apple_pos)
     def apple_eaten(self):
-        self.apple_pos = [random.randint(0,64)*10,random.randint(0,48)*10,10,10]
+        self.apple_pos = [random.randint(0,36)*10,random.randint(0,24)*10,10,10]
