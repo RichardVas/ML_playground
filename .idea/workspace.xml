@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c21b6c29-9eca-497f-b60e-b7f4187bb682" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Simple_neural/smpl_neural.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Floppzy/Pipes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Floppzy/Bird.py" beforeDir="false" afterPath="$PROJECT_DIR$/Floppzy/Bird.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Floppzy/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Floppzy/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Simple_neural/smpl_neural.py" beforeDir="false" afterPath="$PROJECT_DIR$/Simple_neural/smpl_neural.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +38,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/PY_projects/test/ML_playground/Simple_neural/smpl_neural.py",
+    "last_opened_file_path": "C:/PY_projects/test/ML_playground/Floppzy/main.py",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
@@ -45,7 +48,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="smpl_neural" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="Playground" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -53,11 +56,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Simple_neural" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Floppzy" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Simple_neural/smpl_neural.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Floppzy/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -94,7 +97,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Simple_neural/smpl_neural.py</url>
-          <line>58</line>
+          <line>45</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
