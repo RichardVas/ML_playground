@@ -26,7 +26,7 @@ if __name__ == '__main__':
     game_over = False
     framecounter = 0
     while not game_over:
-        space_pressed = False
+        space_pressed = 0
         floppy.gravity()
         for event in pygame.event.get():
             #print(event)
@@ -34,7 +34,7 @@ if __name__ == '__main__':
                 game_over = True
                 df_trace.to_csv('./output.csv')
             if event.type == pygame.KEYDOWN:
-                space_pressed = True
+                space_pressed = 1
                 floppy.jump()
 
         if(framecounter % 5 == 0):

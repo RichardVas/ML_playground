@@ -6,6 +6,8 @@ class Pipe:
         self.pipex = boardW-64
         self.pipey = 0
 
+        self.passed = False
+
 
 
         self.boardH = boardH
@@ -15,6 +17,14 @@ class Pipe:
 
     def move_pipe(self):
         self.pipex += -48
+
+    def get_pipe_position(self):
+        """
+        left down corner and left upprer corner
+        :return: pipe1x, pipe1y, pipe2x, pipe2y
+        """
+        return [self.pipex,self.pipey, self.pipex,500]
+
 
 class Pipes:
 
@@ -34,3 +44,12 @@ class Pipes:
     def addPipe(self):
         new_pipe = Pipe(self.b_height, self.b_width)
         self.pipe_array.append(new_pipe)
+
+    def getPipes(self):
+        tmp = []
+        for i in self.pipe_array:
+            tmp.append(i.get_pipe_position())
+        return tmp
+
+    def removeFirstPipe(self):
+        self.pipe_array.pop(0)
