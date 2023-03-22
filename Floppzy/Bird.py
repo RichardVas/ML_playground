@@ -15,7 +15,7 @@ class Bird:
         self.grav_value=0
 
     def gravity(self):
-        self.grav_value -= 2
+        self.grav_value -= 4
         self.y -= self.grav_value
 
 
